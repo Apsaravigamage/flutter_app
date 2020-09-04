@@ -8,10 +8,26 @@ void main() => runApp(MaterialApp(
         backgroundColor: Colors.red[600],
       ),
         body: Center(
-          child: Icon(
-            Icons.airport_shuttle,
-            color: Colors.lightBlue,
-            size: 50.0,
+          child: Column(
+            children: [
+              RaisedButton.icon(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.mail
+                ),
+
+                label: Text('Mail me'),
+                color: Colors.amber,
+
+              ),
+              IconButton(
+                onPressed: () {
+                  print('You click me');
+                },
+                icon: Icon(Icons.alternate_email),
+                color: Colors.amber,
+              )
+            ],
           )
         ),
       floatingActionButton: FloatingActionButton(
