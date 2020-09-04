@@ -8,16 +8,8 @@ void main() => runApp(MaterialApp(
         backgroundColor: Colors.red[600],
       ),
         body: Center(
-          child: Text(
-            'Welcome !',
-            style: TextStyle(
-              fontSize: 20.0,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 2.0,
-              color: Colors.grey,
-              fontFamily: 'IndieFlower',
-          ),
-
+          child: Image(
+            image: NetworkImage('https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-hand-painted-flowers-leaves-pink-warm-background-design-backgroundframesimplewarmbackground-designbackground-display-image_85350.jpg'),
           ),
         ),
       floatingActionButton: FloatingActionButton(
