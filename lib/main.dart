@@ -9,7 +9,7 @@ void main() => runApp(MaterialApp(
       ),
         body: Center(
           child: Image(
-            image: NetworkImage('https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-hand-painted-flowers-leaves-pink-warm-background-design-backgroundframesimplewarmbackground-designbackground-display-image_85350.jpg'),
+            image: AssetImage('Asset/Q.jpg'),
           ),
         ),
       floatingActionButton: FloatingActionButton(
