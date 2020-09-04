@@ -8,9 +8,11 @@ void main() => runApp(MaterialApp(
         backgroundColor: Colors.red[600],
       ),
         body: Center(
-          child: Image(
-            image: AssetImage('Asset/Q.jpg'),
-          ),
+          child: Icon(
+            Icons.airport_shuttle,
+            color: Colors.lightBlue,
+            size: 50.0,
+          )
         ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
