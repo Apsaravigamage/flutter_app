@@ -7,29 +7,37 @@ void main() => runApp(MaterialApp(
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-        body: Center(
-          child: Column(
-            children: [
-              RaisedButton.icon(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.mail
-                ),
+        body: Column(
+          children: [
+            Center(
+              child: Column(
+                children: [
+                  RaisedButton.icon(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.mail
+                    ),
 
-                label: Text('Mail me'),
-                color: Colors.amber,
+                    label: Text('Mail me'),
+                    color: Colors.amber,
 
-              ),
-              IconButton(
-                onPressed: () {
-                  print('You click me');
-                },
-                icon: Icon(Icons.alternate_email),
-                color: Colors.amber,
+                  ),
+                  IconButton(
+                    onPressed: () {
+                      print('You click me');
+                    },
+                    icon: Icon(Icons.alternate_email),
+                    color: Colors.amber,
+                  )
+                ],
               )
-            ],
-          )
+            ),
+            Container(
+              color: Colors.greenAccent,
+            )
+          ],
         ),
+
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Text('click'),
