@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
@@ -7,11 +8,26 @@ void main() => runApp(MaterialApp(
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-        body: Container(
-          padding: EdgeInsets.symmetric(horizontal: 80.0, vertical: 10.0),
-          margin: EdgeInsets.all(80),
-          color: Colors.grey[600],
-          child: Text('Hello'),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.end ,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Container(
+              padding: EdgeInsets.all(20.0),
+              color: Colors.cyan,
+              child: Text('one'),
+             ),
+            Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.amber,
+              child: Text('two'),
+            ),
+            Container(
+              padding: EdgeInsets.all(40.0),
+              color: Colors.pinkAccent,
+              child: Text('three'),
+            ),
+          ],
         ),
 
 
