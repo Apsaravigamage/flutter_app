@@ -12,15 +12,20 @@ void main() => runApp(MaterialApp(
           mainAxisAlignment: MainAxisAlignment.end ,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Container(
-              padding: EdgeInsets.all(20.0),
-              color: Colors.cyan,
-              child: Text('one'),
-             ),
-            Container(
-              padding: EdgeInsets.all(30.0),
-              color: Colors.amber,
-              child: Text('two'),
+            Padding(
+              padding: const EdgeInsets.all(30.0),
+              child: Container(
+                padding: EdgeInsets.all(20.0),
+                color: Colors.cyan,
+                child: Text('one'),
+               ),
+            ),
+            Center(
+              child: Container(
+                padding: EdgeInsets.all(30.0),
+                color: Colors.amber,
+                child: Text('two'),
+              ),
             ),
             Container(
               padding: EdgeInsets.all(40.0),
