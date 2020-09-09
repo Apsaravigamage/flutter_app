@@ -8,33 +8,38 @@ void main() => runApp(MaterialApp(
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.end ,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+        body: Row(
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(30.0),
-              child: Container(
-                padding: EdgeInsets.all(20.0),
-                color: Colors.cyan,
-                child: Text('one'),
-               ),
+            Expanded(
+                child: Image.asset('Asset/Q.jpg'),
+                    flex: 3,
             ),
-            Center(
+            Expanded(
+              flex: 1,
+              child: Container(
+                padding: EdgeInsets.all(30.0),
+                color: Colors.green,
+                child: Text('1'),
+              ),
+            ),
+            Expanded(
+              flex: 1 ,
               child: Container(
                 padding: EdgeInsets.all(30.0),
                 color: Colors.amber,
-                child: Text('two'),
+                child: Text('2'),
               ),
             ),
-            Container(
-              padding: EdgeInsets.all(40.0),
-              color: Colors.pinkAccent,
-              child: Text('three'),
+            Expanded(
+              flex: 1,
+              child: Container(
+                padding: EdgeInsets.all(30.0),
+                color: Colors.red,
+                child: Text('3'),
+              ),
             ),
           ],
         ),
-
 
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
