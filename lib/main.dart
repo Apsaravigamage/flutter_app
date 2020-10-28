@@ -18,6 +18,32 @@ class _QuoteListState extends State<QuoteList> {
     Quote(author: 'Osca Wilde', text: 'be good person'),
   ];
 
+  Widget quoteTemplate(quote){
+    return Card(
+      margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0),
+      child: Column(
+        children: <Widget>[
+          Text(
+            quote.text,
+            style: TextStyle(
+              fontSize: 18.0,
+              color: Colors.grey[600],
+            ),
+          ),
+          SizedBox(height: 6.0,),
+          Text(
+            quote.author,
+            style: TextStyle(
+              fontSize: 14.0,
+              color: Colors.grey[800],
+            ),
+          )
+        ],
+      ),
+    );
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,8 +54,8 @@ class _QuoteListState extends State<QuoteList> {
         backgroundColor: Colors.redAccent,
       ),
       body: Column(
-        children: quotes.map((quote) => Text('${quote.text} - ${quote.author}')).toList(),
-      ),
+        children: quotes.map((quote) => quoteTemplate(quote)).toList(),
+      )
     );
 
   }
