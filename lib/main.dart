@@ -2,51 +2,40 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
-    home: Scaffold(
-      appBar: AppBar(
-        title: Text('My First App'),
-        centerTitle: true,
-        backgroundColor: Colors.red[600],
-      ),
-        body: Row(
-          children: <Widget>[
-            Expanded(
-                child: Image.asset('Asset/Q.jpg'),
-                    flex: 3,
-            ),
-            Expanded(
-              flex: 1,
-              child: Container(
-                padding: EdgeInsets.all(30.0),
-                color: Colors.green,
-                child: Text('1'),
-              ),
-            ),
-            Expanded(
-              flex: 1 ,
-              child: Container(
-                padding: EdgeInsets.all(30.0),
-                color: Colors.amber,
-                child: Text('2'),
-              ),
-            ),
-            Expanded(
-              flex: 1,
-              child: Container(
-                padding: EdgeInsets.all(30.0),
-                color: Colors.red,
-                child: Text('3'),
-              ),
-            ),
-          ],
-        ),
+  home: QuoteList(),
+));
+class QuoteList extends StatefulWidget {
+  @override
+  _QuoteListState createState() => _QuoteListState();
+}
 
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Text('click'),
-        backgroundColor: Colors.red,
+class _QuoteListState extends State<QuoteList> {
+
+  List<String> quotes =[
+    'dsskpd spdspl psdlkdl',
+    'djsod jwojj foejfoej fojefoej',
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[200],
+      appBar: AppBar(
+        title: Text('Awesome Quotes'),
+        centerTitle: true,
+        backgroundColor: Colors.redAccent,
       ),
-    ),
-  ));
+      body: Column(
+        children: quotes.map((quote) {
+          return Text(quote);
+        }).toList(),
+      ),
+    );
+
+  }
+}
+
+
+
 
 
